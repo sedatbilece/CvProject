@@ -1,0 +1,6 @@
+veri tabanını daha öncesinde Dbfirst yaklaşımı ile sql server ile oluşturmuştuk . Bu commit
+ise veri tabanının Models/Entity altına eklenerek modelllerin oluşturulması işlemini içermektedir 
+Models/Entity altında ->new item ->data->Ado.net entity model seç ->ef desiner ->new con-> sql server-> server name ver ve devam et
+
+---------------> Commit Name : Dbfirst model eklenilmesi
+
