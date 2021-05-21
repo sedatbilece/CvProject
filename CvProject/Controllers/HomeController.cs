@@ -29,5 +29,14 @@ namespace CvProject.Controllers
 
             return View();
         }
+
+
+
+        public ActionResult TestPage()
+        {
+
+
+            return View();
+        }
     }
 }
