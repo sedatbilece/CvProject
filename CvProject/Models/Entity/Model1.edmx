@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="DbCvModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="DbCvModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="admin">
           <Key>
             <PropertyRef Name="id" />
@@ -73,6 +73,20 @@
           <Property Name="aciklama" Type="varchar" MaxLength="100" />
           <Property Name="link" Type="varchar" MaxLength="100" />
         </EntityType>
+        <EntityType Name="SosyalMedya">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="facebook" Type="varchar" MaxLength="100" />
+          <Property Name="twitter" Type="varchar" MaxLength="100" />
+          <Property Name="youtube" Type="varchar" MaxLength="100" />
+          <Property Name="github" Type="varchar" MaxLength="100" />
+          <Property Name="linkedin" Type="varchar" MaxLength="100" />
+          <Property Name="ek1" Type="varchar" MaxLength="100" />
+          <Property Name="ek2" Type="varchar" MaxLength="100" />
+          <Property Name="ek3" Type="nchar" MaxLength="10" />
+        </EntityType>
         <EntityType Name="Yetenekler">
           <Key>
             <PropertyRef Name="id" />
@@ -88,10 +102,10 @@
           <EntitySet Name="Hobilerim" EntityType="Self.Hobilerim" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="iletisim" EntityType="Self.iletisim" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Sertifikalar" EntityType="Self.Sertifikalar" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SosyalMedya" EntityType="Self.SosyalMedya" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Yetenekler" EntityType="Self.Yetenekler" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="DbCvModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -179,7 +193,22 @@
           <EntitySet Name="iletisim" EntityType="Self.iletisim" />
           <EntitySet Name="Sertifikalar" EntityType="Self.Sertifikalar" />
           <EntitySet Name="Yetenekler" EntityType="Self.Yetenekler" />
+          <EntitySet Name="SosyalMedya" EntityType="DbCvModel.SosyalMedya" />
         </EntityContainer>
+        <EntityType Name="SosyalMedya">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="facebook" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="twitter" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="youtube" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="github" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="linkedin" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="ek1" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="ek2" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="ek3" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -266,6 +295,21 @@
               <MappingFragment StoreEntitySet="Yetenekler">
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="yetenek" ColumnName="yetenek" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SosyalMedya">
+            <EntityTypeMapping TypeName="DbCvModel.SosyalMedya">
+              <MappingFragment StoreEntitySet="SosyalMedya">
+                <ScalarProperty Name="ek3" ColumnName="ek3" />
+                <ScalarProperty Name="ek2" ColumnName="ek2" />
+                <ScalarProperty Name="ek1" ColumnName="ek1" />
+                <ScalarProperty Name="linkedin" ColumnName="linkedin" />
+                <ScalarProperty Name="github" ColumnName="github" />
+                <ScalarProperty Name="youtube" ColumnName="youtube" />
+                <ScalarProperty Name="twitter" ColumnName="twitter" />
+                <ScalarProperty Name="facebook" ColumnName="facebook" />
+                <ScalarProperty Name="id" ColumnName="id" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

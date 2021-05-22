@@ -33,5 +33,6 @@ namespace CvProject.Models.Entity
         public virtual DbSet<iletisim> iletisim { get; set; }
         public virtual DbSet<Sertifikalar> Sertifikalar { get; set; }
         public virtual DbSet<Yetenekler> Yetenekler { get; set; }
+        public virtual DbSet<SosyalMedya> SosyalMedya { get; set; }
     }
 }

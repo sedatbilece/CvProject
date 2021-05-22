@@ -170,6 +170,9 @@
     <Compile Include="Models\Entity\Sertifikalar.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\Entity\SosyalMedya.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\Entity\Yetenekler.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
