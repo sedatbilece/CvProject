@@ -1,0 +1,31 @@
+﻿
+
+
+@using CvProject.Models.Entity
+@model  List<Deneyimler>
+
+
+
+
+@foreach(var x in Model)
+{
+
+
+<div class="col-lg-6" data-aos="fade-up">
+    <h3 class="resume-title"> @x.baslik </h3>
+
+
+    <div class="resume-item pb-0">
+
+
+        <h4>@x.altbaslik</h4>
+
+
+        <p><em>@x.aciklama</em></p>
+        <ul>
+            <li>@x.tarih</li>
+           
+        </ul>
+    </div>
+</div>
+}

@@ -18,5 +18,11 @@ namespace CvProject.Controllers
             var degerler = db.Hakkimda.ToList();
             return View(degerler);
         }
+
+        public PartialViewResult Deneyimler()
+        {
+            var deneyimler = db.Deneyimler.ToList();
+            return PartialView(deneyimler);
+        }
     }
 }
