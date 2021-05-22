@@ -36,5 +36,23 @@ namespace CvProject.Controllers
             var yetenekler = db.Hobilerim.ToList();
             return PartialView(yetenekler);
         }
+
+
+
+        [HttpGet]
+        public PartialViewResult Iletisim()
+        {
+           
+            return PartialView();
+        }
+        [HttpPost]
+        public PartialViewResult Iletisim(iletisim iletisim)
+        {
+
+            iletisim.tarih=DateTime.Parse(DateTime.Now.ToLongTimeString() );
+            db.iletisim.Add(iletisim);
+            db.SaveChanges();
+            return PartialView();
+        }
     }
 }
