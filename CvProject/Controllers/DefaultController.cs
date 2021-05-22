@@ -24,5 +24,17 @@ namespace CvProject.Controllers
             var deneyimler = db.Deneyimler.ToList();
             return PartialView(deneyimler);
         }
+
+        public PartialViewResult Sertifikalar()
+        {
+            var Sertifikalar = db.Sertifikalar.ToList();
+            return PartialView(Sertifikalar);
+        }
+
+        public PartialViewResult Yetenekler()
+        {
+            var yetenekler = db.Hobilerim.ToList();
+            return PartialView(yetenekler);
+        }
     }
 }

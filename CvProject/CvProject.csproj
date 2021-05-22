@@ -336,6 +336,8 @@
     <Content Include="Views\Home\TestPage.cshtml" />
     <Content Include="Views\Default\Index.cshtml" />
     <Content Include="Views\Default\Deneyimler.cshtml" />
+    <Content Include="Views\Default\Sertifikalar.cshtml" />
+    <Content Include="Views\Default\Yetenekler.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

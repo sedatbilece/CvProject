@@ -4,3 +4,7 @@ Models/Entity altında ->new item ->data->Ado.net entity model seç ->ef desiner
 
 ---------------> Commit Name : Dbfirst model eklenilmesi
 
+
+tek sayfada birden fazla tablodan veri getirlecekse bunlar partial viewde 1 tablo kullanılarak partial view ise index te @Html.ACTİON("PARTİALVİEWADI") ile kullanılmalı
+
+---------------> Commit Name : Sertifikalar partial view eklendi
