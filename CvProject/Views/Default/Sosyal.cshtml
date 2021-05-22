@@ -1,0 +1,15 @@
+﻿@using CvProject.Models.Entity
+
+
+@model List<egitim>
+
+
+
+
+
+    @foreach (var x in Model)
+    {
+        <a href=@x.altbaslik class="nav-link scrollto "> <span>@x.baslik</span></a>
+
+    }
+

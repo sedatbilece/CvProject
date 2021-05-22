@@ -1,0 +1,40 @@
+﻿
+@{
+    ViewBag.Title = "SosyalGetir";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>SosyalGetir</h2>
+
+
+
+
+
+<form action="/Admin/SosyalEkle" method="post">
+
+    <p>baslik: </p>
+    <input type="text" class="form-control" name="baslik" required />
+
+    <p>altbaslik: </p>
+    <input type="text" class="form-control" name="altbaslik" required />
+
+    <button type="submit" class=" btn btn-primary">kaydet</button>
+</form>
+
+
+
+
+
+@foreach (var x in Model)
+{
+
+    @x.baslik 
+    <br />
+    @x.altbaslik 
+
+    <a href="/Admin/SosyalSil/@x.id">sil </a>
+
+    <hr />
+
+}
+

@@ -190,8 +190,8 @@
     <Content Include="Content\Site.css" />
     <Content Include="iPortfolio\assets\css\style.css" />
     <Content Include="iPortfolio\assets\img\apple-touch-icon.png" />
+    <Content Include="iPortfolio\assets\img\boztepe.jpeg" />
     <Content Include="iPortfolio\assets\img\favicon.png" />
-    <Content Include="iPortfolio\assets\img\hero-bg.jpg" />
     <Content Include="iPortfolio\assets\img\portfolio\portfolio-1.jpg" />
     <Content Include="iPortfolio\assets\img\portfolio\portfolio-2.jpg" />
     <Content Include="iPortfolio\assets\img\portfolio\portfolio-3.jpg" />
@@ -204,7 +204,6 @@
     <Content Include="iPortfolio\assets\img\portfolio\portfolio-details-1.jpg" />
     <Content Include="iPortfolio\assets\img\portfolio\portfolio-details-2.jpg" />
     <Content Include="iPortfolio\assets\img\portfolio\portfolio-details-3.jpg" />
-    <Content Include="iPortfolio\assets\img\profile-img.jpg" />
     <Content Include="iPortfolio\assets\img\testimonials\testimonials-1.jpg" />
     <Content Include="iPortfolio\assets\img\testimonials\testimonials-2.jpg" />
     <Content Include="iPortfolio\assets\img\testimonials\testimonials-3.jpg" />
@@ -350,6 +349,8 @@
     <Content Include="Views\Admin\SertifikalarGet.cshtml" />
     <Content Include="Views\Admin\YeteneklerGet.cshtml" />
     <Content Include="Views\Admin\MesajGetir.cshtml" />
+    <Content Include="Views\Default\Sosyal.cshtml" />
+    <Content Include="Views\Admin\SosyalGetir.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

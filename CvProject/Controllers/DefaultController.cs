@@ -36,6 +36,11 @@ namespace CvProject.Controllers
             var yetenekler = db.Hobilerim.ToList();
             return PartialView(yetenekler);
         }
+        public PartialViewResult Sosyal()
+        {
+            var yetenekler = db.egitim.ToList();
+            return PartialView(yetenekler);
+        }
 
 
 

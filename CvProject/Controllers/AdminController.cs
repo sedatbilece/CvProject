@@ -65,6 +65,30 @@ namespace CvProject.Controllers
 
             return RedirectToAction("Index");
         }
+        //SOSYAL
+        public ActionResult SosyalGetir()
+        {
+            List<egitim> ld = db.egitim.ToList();
+
+            return View(ld);
+        }
+        [HttpPost]
+        public ActionResult SosyalEkle(egitim dd)
+        {
+            db.egitim.Add(dd);
+            db.SaveChanges();
+
+           
+            return RedirectToAction("Index");
+        }
+        public ActionResult SosyalSil(int id)
+        {
+            var den = db.egitim.Find(id);
+            db.egitim.Remove(den);
+            db.SaveChanges();
+
+            return RedirectToAction("Index");
+        }
 
 
         // SERTIFIKALAR
