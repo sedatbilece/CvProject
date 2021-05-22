@@ -1,0 +1,39 @@
+﻿
+@{
+    ViewBag.Title = "DeneyimlerGet";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+@model List<CvProject.Models.Entity.Deneyimler>
+<h2>DeneyimlerGet</h2>
+
+
+
+<form action="/Admin/DeneyimlerEkle" method="post">
+
+    <p>baslik: </p>
+    <input type="text" class="form-control" name="baslik" required />
+
+    <p>altbaslik: </p>
+    <input type="text" class="form-control" name="altbaslik" required />
+
+    <p>aciklama: </p>
+    <input type="text" class="form-control" name="aciklama" required />
+
+    <button type="submit" class=" btn btn-primary">kaydet</button>
+</form>
+
+
+
+
+
+@foreach(var x in Model)
+{
+
+    @x.baslik   @x.altbaslik @x.aciklama @x.tarih
+
+    <a href="/Admin/DeneyimSil/@x.id">sil </a>
+
+    <hr />
+
+}
+

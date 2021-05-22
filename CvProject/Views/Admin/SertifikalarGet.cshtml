@@ -1,0 +1,42 @@
+﻿
+@{
+    ViewBag.Title = "SertifikalarGet";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>SertifikalarGet</h2>
+
+
+@model List<CvProject.Models.Entity.Sertifikalar>
+
+
+
+
+<form action="/Admin/SertifikaEkle" method="post">
+
+    <p>aciklama: </p>
+    <input type="text" class="form-control" name="aciklama" required />
+
+    <p>link: </p>
+    <input type="text" class="form-control" name="link" required />
+
+    
+
+    <button type="submit" class=" btn btn-primary">kaydet</button>
+</form>
+
+
+
+
+
+@foreach (var x in Model)
+{
+
+    @x.aciklama   @x.link
+
+    <a href="/Admin/SertifikaSil/@x.id">sil </a>
+
+    <hr />
+
+}
+

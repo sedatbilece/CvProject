@@ -1,0 +1,21 @@
+﻿
+@{
+    ViewBag.Title = "MesajGetir";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+@model List<CvProject.Models.Entity.iletisim>
+<h2>MesajGetir</h2>
+
+
+@foreach(var x in Model)
+{
+    @x.kimden @x.konu @x.mail @x.tarih 
+    <br />
+    @x.mesaj
+    <br />
+    <a href="/Admin/MesajSil/@x.id">sil </a>
+
+    <hr />
+
+
+}

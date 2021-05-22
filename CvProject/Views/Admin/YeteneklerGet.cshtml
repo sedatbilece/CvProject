@@ -1,0 +1,41 @@
+﻿
+@{
+    ViewBag.Title = "YeteneklerGet";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+@model List<CvProject.Models.Entity.Hobilerim>
+
+
+
+
+<form action="/Admin/YetenekEkle" method="post">
+
+    <p>yetenek ismi: </p>
+    <input type="text" class="form-control" name="aciklama1" required />
+
+    <p>% olarak yetenek seviyesi: </p>
+    <input type="text" class="form-control" name="aciklama2" required />
+
+    
+
+    <button type="submit" class=" btn btn-primary">kaydet</button>
+</form>
+
+
+
+
+
+@foreach (var x in Model)
+{
+
+    @x.aciklama1  @x.aciklama2
+
+    <a href="/Admin/YetenekSil/@x.id">sil </a>
+
+    <hr />
+
+}
+
+
+
