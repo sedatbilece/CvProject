@@ -8,6 +8,7 @@ using CvProject.Models;
 
 namespace CvProject.Controllers
 {
+    [Authorize]
     public class AdminController : Controller
     {
 
@@ -19,7 +20,27 @@ namespace CvProject.Controllers
             return View();
         }
 
-      //   HAKKIMDA
+        //ADMIN
+        public ActionResult AdminUpdate()
+        {
+            var hkm = db.admin.FirstOrDefault();
+
+            return View(hkm);
+        }
+        [HttpPost]
+        public ActionResult AdminUpdate(admin adm)
+        {
+            var x = db.admin.FirstOrDefault();
+            x.kullaniciadi = adm.kullaniciadi;
+            x.sifre = adm.sifre;
+            db.SaveChanges();
+
+            return RedirectToAction("Index");
+        }
+
+
+
+        //   HAKKIMDA
         public ActionResult HakkimdaUpdate()
         {
             var hkm = db.Hakkimda.FirstOrDefault();

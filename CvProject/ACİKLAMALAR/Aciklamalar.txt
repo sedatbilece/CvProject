@@ -5,10 +5,30 @@ Models/Entity altında ->new item ->data->Ado.net entity model seç ->ef desiner
 ---------------> Commit Name : Dbfirst model eklenilmesi
 
 
+
+
+
 tek sayfada birden fazla tablodan veri getirlecekse bunlar partial viewde 1 tablo kullanılarak partial view ise index te @Html.ACTİON("PARTİALVİEWADI") ile kullanılmalı
 
 ---------------> Commit Name : Sertifikalar partial view eklendi
 
+
+
+
+
 veri tabanına yeni tablo ekledikten sonra modele eklemek için entity->model1.edmx gel sağ tık update de tabloyu seç
 
 ---------------> Commit Name : Sosyalmedya tablosu eklendi
+
+
+
+
+
+
+auth işlemleri yapıldı hata alınırsa web.config içinde system.web içine bunu yaz
+  <authentication mode="Forms">
+      <forms loginUrl="/Login/Index"></forms>
+      
+    </authentication>
+    
+---------------> Commit Name :  Authentication ve login işlemleri
