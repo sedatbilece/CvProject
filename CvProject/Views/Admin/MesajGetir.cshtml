@@ -7,11 +7,16 @@
 <h2>MesajGetir</h2>
 
 
-@foreach(var x in Model)
+@foreach (var x in Model)
 {
-    @x.kimden @x.konu @x.mail @x.tarih 
+    <span>gönderen: </span> @x.kimden
     <br />
-    @x.mesaj
+
+    <span>konu: </span> @x.konu<br />
+    <span>mail: </span> @x.mail<br />
+    <span>tarih: </span> @x.tarih<br />
+    <br />
+    <span>mesaj : </span> @x.mesaj
     <br />
     <a href="/Admin/MesajSil/@x.id">sil </a>
 

@@ -54,7 +54,7 @@ namespace CvProject.Controllers
         public PartialViewResult Iletisim(iletisim iletisim)
         {
 
-            iletisim.tarih=DateTime.Parse(DateTime.Now.ToLongTimeString() );
+            iletisim.tarih = DateTime.Parse(DateTime.Now.ToShortDateString()) ;
             db.iletisim.Add(iletisim);
             db.SaveChanges();
             return PartialView();
